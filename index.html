@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وبسایت من</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* هدر */
+        header {
+            background: #2d2d2d;
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+
+        /* منو */
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 12px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: #ff6b6b;
+            border-radius: 5px;
+        }
+
+        /* بخش اصلی */
+        .main-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #ff6b6b;
+        }
+
+        .my-website {
+            background: #00ff99;
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .my-website:hover {
+            transform: translateY(-5px);
+        }
+
+        /* فوتر */
+        footer {
+            background: #2d2d2d;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* تنظیمات موبایل */
+        @media (max-width: 768px) {
+            .social-icons {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .social-icons a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">وبسایت من</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#social">شبکه های اجتماعی</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش اصلی -->
+    <section class="main-section" id="home">
+        <div class="container">
+            <h1>خوش آمدید</h1>
+            <p>لینک شبکه های اجتماعی:</p>
+            
+            <div class="social-icons">
+                <a href="https://youtube.com/@one_tesla_tech?si=qrEGLK60coqBg-Zs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/one_tesla_tech?igsh=MWRsdmtvOXRvbDRyaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/One_tesla_tech" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.aparat.com/1teslatech" target="_blank"><img src="https://cdn.nody.ir/files/2023/03/03/nody-%D9%84%D9%88%DA%AF%D9%88-1677842109.svg" alt="Aparat" style="width:25px; height:25px;"></a>
+            </div>
+            
+            <a href="https://1teslatech.github.io/my-first-website/" target="_blank" class="my-website">وبسایت من</a>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer id="contact">
+        <div class="container">
+            <p>تماس با من: https://t.me/Alawi_212</p>
+        </div>
+    </footer>
+</body>
+</html>
