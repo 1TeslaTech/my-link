@@ -1,0 +1,21 @@
+{
+    "name": "لینک‌های من",
+    "short_name": "لینک‌ها",
+    "description": "لینک‌های شبکه‌های اجتماعی و وبسایت شخصی من",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1c2526",
+    "theme_color": "#1c2526",
+    "icons": [
+        {
+            "src": "my logo.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        },
+        {
+            "src": "images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ]
+}
