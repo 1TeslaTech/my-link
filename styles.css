@@ -11,13 +11,26 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(45deg, #1c2526, #2c3e50); /* پس‌زمینه تیره */
-    color: #e0e0e0; /* رنگ متن روشن برای کنتراست */
+    color: #e0e0e0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* ذرات پشت محتوا */
 }
 
 .container {
     max-width: 600px;
     padding: 20px;
+    position: relative;
+    z-index: 1; /* محتوا بالای ذرات */
 }
 
 h1 {
@@ -47,7 +60,7 @@ p {
     text-decoration: none;
     color: #fff;
     font-size: 1.1em;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -56,17 +69,31 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* رنگ دکمه‌ها */
-.instagram { background: #e4405f; }
-.youtube { background: #ff0000; }
-.telegram { background: #0088cc; }
-.aparat { background: #ed145b; }
-.website { background: #1a73e8; }
-
-/* تنظیمات آیکون‌ها */
+/* انیمیشن برای آیکون‌ها */
 .btn i {
     font-size: 1.3em;
+    transition: transform 0.5s;
 }
+
+.btn:hover i {
+    transform: rotate(360deg); /* چرخش آیکون */
+}
+
+/* رنگ دکمه‌ها و انیمیشن تغییر رنگ */
+.instagram { background: #e4405f; }
+.instagram:hover { background: linear-gradient(45deg, #e4405f, #f77737); }
+
+.youtube { background: #ff0000; }
+.youtube:hover { background: linear-gradient(45deg, #ff0000, #ff6b6b); }
+
+.telegram { background: #0088cc; }
+.telegram:hover { background: linear-gradient(45deg, #0088cc, #00b7eb); }
+
+.aparat { background: #ed145b; }
+.aparat:hover { background: linear-gradient(45deg, #ed145b, #ff6b9b); }
+
+.website { background: #1a73e8; }
+.website:hover { background: linear-gradient(45deg, #1a73e8, #4dabf7); }
 
 /* ریسپانسیو کردن */
 @media (max-width: 600px) {
@@ -75,7 +102,7 @@ p {
     .btn { font-size: 1em; padding: 12px; }
 }
 
-/* فونت سفارشی (اختیاری) */
+/* فونت سفارشی */
 @font-face {
     font-family: 'Vazir';
     src: url('https://cdn.fontcdn.ir/Fonts/Vazir/Vazir.woff') format('woff');
