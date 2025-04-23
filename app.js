@@ -37,26 +37,27 @@ particlesJS('particles-js', {
         }
     },
     interactivity: {
-        detect_on: 'canvas',
+        detect_on: 'canvas', // تشخیص تعامل روی کل canvas
         events: {
             onhover: {
                 enable: true,
-                mode: 'repulse' // ذرات با ماوس فراری می‌شن
+                mode: 'repulse' // ذرات با ماوس/لمس فرار می‌کنن
             },
             onclick: {
                 enable: true,
-                mode: 'push' // کلیک باعث اضافه شدن ذرات می‌شه
-            }
+                mode: 'push' // کلیک/لمس باعث اضافه شدن ذرات می‌شه
+            },
+            resize: true // پشتیبانی از تغییر اندازه صفحه
         },
         modes: {
             repulse: {
-                distance: 100,
+                distance: 100, // فاصله فرار ذرات
                 duration: 0.4
             },
             push: {
-                particles_nb: 4
+                particles_nb: 4 // تعداد ذرات جدید با هر کلیک/لمس
             }
         }
     },
-    retina_detect: true
+    retina_detect: true // پشتیبانی از نمایشگرهای با رزولوشن بالا
 });
