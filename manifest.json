@@ -2,7 +2,7 @@
     "name": "لینک‌های من",
     "short_name": "لینک‌ها",
     "description": "لینک‌های شبکه‌های اجتماعی و وبسایت شخصی من",
-    "start_url": "/",
+    "start_url": "https://1teslatech.github.io/my-link/",
     "display": "standalone",
     "background_color": "#1c2526",
     "theme_color": "#1c2526",
