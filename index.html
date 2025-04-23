@@ -6,6 +6,12 @@
     <title>لینک‌های من</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- تگ‌های PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1c2526"> <!-- رنگ نوار وضعیت -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- پشتیبانی iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="my logo.jpg"> <!-- آیکون iOS -->
 </head>
 <body>
     <div id="particles-js"></div>
@@ -26,12 +32,23 @@
             <a href="https://www.aparat.com/1teslatech" class="btn aparat" target="_blank">
                 <i class="fas fa-video"></i> آپارات
             </a>
-            <a href="https://1teslatech.github.io/my-first-website/" class="btn website" target="_blank">
-                <i class="fas fa-globe"></i> وبسایت
+            <a href="https://1teslatech.github.io/my-first-website" class="btn website" target="_blank">
+                <i class="fas fa-globe"></i> وبسایت شخصی
             </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        window.onload = function() {
+            if (typeof particlesJS === 'undefined') {
+                console.error('particles.js لود نشد!');
+            } else {
+                particlesJS.load('particles-js', 'app.js', function() {
+                    console.log('ذرات لود شدند!');
+                });
+            }
+        };
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
