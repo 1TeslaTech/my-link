@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1c2526, #2c3e50); /* پس‌زمینه تیره */
+    color: #e0e0e0; /* رنگ متن روشن برای کنتراست */
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* رنگ دکمه‌ها */
+.instagram { background: #e4405f; }
+.youtube { background: #ff0000; }
+.telegram { background: #0088cc; }
+.aparat { background: #ed145b; }
+.website { background: #1a73e8; }
+
+/* تنظیمات آیکون‌ها */
+.btn i {
+    font-size: 1.3em;
+}
+
+/* ریسپانسیو کردن */
+@media (max-width: 600px) {
+    h1 { font-size: 2em; }
+    p { font-size: 1em; }
+    .btn { font-size: 1em; padding: 12px; }
+}
+
+/* فونت سفارشی (اختیاری) */
+@font-face {
+    font-family: 'Vazir';
+    src: url('https://cdn.fontcdn.ir/Fonts/Vazir/Vazir.woff') format('woff');
+}
