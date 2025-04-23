@@ -1,7 +1,7 @@
 {
-    "name": "لینک‌های من",
-    "short_name": "لینک‌ها",
-    "description": "لینک‌های شبکه‌های اجتماعی و وبسایت شخصی من",
+    "name": "One tesla tech",
+    "short_name": "One tesla tech",
+    "description": "تسلا الکترونیک",
     "start_url": "https://1teslatech.github.io/my-link/",
     "display": "standalone",
     "background_color": "#1c2526",
