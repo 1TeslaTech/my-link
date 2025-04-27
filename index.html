@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسلا الکترونیک</title>
+    <title>لینک‌های من</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- تگ‌های PWA -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#1c2526"> <!-- رنگ نوار وضعیت -->
-    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- پشتیبانی iOS -->
+    <meta name="theme-color" content="#1c2526">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="my logo.jpg"> <!-- آیکون iOS -->
+    <link rel="apple-touch-icon" href="my logo2.png">
 </head>
 <body>
     <div id="particles-js"></div>
     <div class="container">
-        <img src="my logo2.png" alt="لوگوی من" class="logo">
+        <img src="my logo2.png" alt="لوگوی من" class="logo" onclick="openPreview()">
+        <div id="logo-preview" class="preview-modal">
+            <img src="my logo2.png" alt="پیش‌نمایش لوگو" class="preview-img">
+        </div>
         <h1>با من در ارتباط باش!</h1>
-        <p>لینک‌ شبکه‌های اجتماعی و وبسایت من</p>
+        <p>لینک‌های شبکه‌های اجتماعی و وبسایت من</p>
         <div class="social-links">
             <a href="https://www.instagram.com/one_tesla_tech?igsh=MWRsdmtvOXRvbDRyaQ==" class="btn instagram" target="_blank">
                 <i class="fab fa-instagram"></i> اینستاگرام
@@ -33,12 +36,13 @@
                 <i class="fas fa-video"></i> آپارات
             </a>
             <a href="https://1teslatech.github.io/my-first-website" class="btn website" target="_blank">
-                <i class="fas fa-globe"></i> وبسایت
+                <i class="fas fa-globe"></i> وبسایت شخصی
             </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // چک کردن لود particles.js
         window.onload = function() {
             if (typeof particlesJS === 'undefined') {
                 console.error('particles.js لود نشد!');
@@ -48,6 +52,18 @@
                 });
             }
         };
+        // ثبت سرویس‌ورکر
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('سرویس‌ورکر ثبت شد'))
+                .catch(err => console.error('خطا در ثبت سرویس‌ورکر:', err));
+        }
+        // مدیریت پیش‌نمایش لوگو
+        function openPreview() {
+            const modal = document.getElementById('logo-preview');
+            modal.style.display = 'flex';
+            modal.onclick = () => modal.style.display = 'none'; // بستن با کلیک
+        }
     </script>
     <script src="app.js"></script>
 </body>
