@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TKLLVYJJ4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,26 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسلا تک | ساخت پروژه‌های الکترونیکی | One Tesla Tech</title>
     
-    <!-- متا تگ‌های سئو -->
     <meta name="description" content="تسلا تک (One Tesla Tech) - ساخت پروژه‌های الکترونیکی با آردوینو و میکروکنترلر همراه با ویدیوهای آموزشی.">
     <meta name="keywords" content="تسلا تک, وان تسلا تک, One Tesla Tech, Tesla Tech, آموزش الکترونیک, پروژه الکترونیکی, آموزش مدار">
     <meta name="author" content="One Tesla Tech">
     <meta name="robots" content="index, follow">
 
-    <!-- متا تگ‌های Open Graph برای شبکه‌های اجتماعی -->
     <meta property="og:title" content="تسلا تک | آموزش پروژه‌های الکترونیکی">
     <meta property="og:description" content="لینک‌های شبکه‌های اجتماعی و آموزش‌های پروژه‌های الکترونیکی در تسلا تک (One Tesla Tech).">
     <meta property="og:image" content="https://oneteslatech.sbs/my logo2.png">
     <meta property="og:url" content="https://oneteslatech.sbs">
     <meta property="og:type" content="website">
 
-    <!-- متا تگ‌های Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="تسلا تک | ساخت پروژه‌های الکترونیکی">
     <meta name="twitter:description" content="لینک‌های شبکه‌های اجتماعی و آموزش‌های پروژه‌های الکترونیکی در تسلا تک (One Tesla Tech).">
     <meta name="twitter:image" content="https://oneteslatech.sbs/my logo2.png">
 
-    <!-- Schema Markup برای سئو -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +46,6 @@
     }
     </script>
 
-    <!-- تگ‌های PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1c2526">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,6 +82,83 @@
             </a>
         </div>
     </div>
+
+    <style>
+        .cipher-fab {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 65px;
+            height: 65px;
+            background: rgba(28, 37, 38, 0.85);
+            backdrop-filter: blur(8px);
+            border: 2px solid #00d2ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+            text-decoration: none;
+            animation: cipher-pulse 2s infinite;
+        }
+
+        .cipher-fab i {
+            color: #00d2ff;
+            font-size: 26px;
+        }
+
+        .cipher-fab:hover {
+            transform: scale(1.15) rotate(15deg);
+            background: #00d2ff;
+        }
+
+        .cipher-fab:hover i {
+            color: #1c2526;
+        }
+
+        .cipher-tooltip {
+            position: absolute;
+            right: -120px;
+            background: #00d2ff;
+            color: #1c2526;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            white-space: nowrap;
+            pointer-events: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cipher-fab:hover .cipher-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 80px;
+        }
+
+        @keyframes cipher-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 210, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 210, 255, 0); }
+        }
+
+        /* مخفی کردن در صفحات خیلی کوچک در صورت تداخل */
+        @media (max-width: 400px) {
+            .cipher-fab { bottom: 20px; left: 20px; width: 55px; height: 55px; }
+        }
+    </style>
+
+    <a href="https://1teslatech.github.io/Persian-Cipher/" class="cipher-fab" target="_blank">
+        <i class="fas fa-user-secret"></i>
+        <span class="cipher-tooltip">Persian Cipher</span>
+    </a>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         // چک کردن لود particles.js
